@@ -1,13 +1,13 @@
 export const NPP = {
   SERVER: {
     NAME: '@mhdd_24/notepadpp-mcp',
-    VERSION: '1.0.0',
+    VERSION: '1.0.1',
     STARTUP_MESSAGE: 'Notepad++ MCP Server Started',
     FATAL_PREFIX: 'Fatal error:',
   },
   DEFAULTS: {
     EXE: 'C:\\Program Files\\Notepad++\\notepad++.exe',
-    WORKDIR: 'C:\\codeBase',
+    WORKDIR: '', // resolved in env.ts to ~/Documents/NotepadPP-Notes
     SESSION_SUBDIR: 'notepadpp-mcp-sessions',
   },
   ENV: {

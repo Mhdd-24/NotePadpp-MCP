@@ -23,10 +23,17 @@ function defaultSessionStorage(): string {
   return path.join(os.homedir(), 'AppData', 'Roaming', 'Notepad++', NPP.DEFAULTS.SESSION_SUBDIR);
 }
 
+function defaultWorkdir(): string {
+  if (NPP.DEFAULTS.WORKDIR.trim()) {
+    return NPP.DEFAULTS.WORKDIR;
+  }
+  return path.join(os.homedir(), 'Documents', 'NotepadPP-Notes');
+}
+
 export const env = {
   NOTEPADPP_EXE: readEnv(NPP.ENV.EXE_KEYS) ?? NPP.DEFAULTS.EXE,
   NOTEPADPP_SESSION_XML: readEnv(NPP.ENV.SESSION_XML_KEYS) ?? defaultSessionXml(),
-  NOTEPADPP_WORKDIR: readEnv(NPP.ENV.WORKDIR_KEYS) ?? NPP.DEFAULTS.WORKDIR,
+  NOTEPADPP_WORKDIR: readEnv(NPP.ENV.WORKDIR_KEYS) ?? defaultWorkdir(),
   NOTEPADPP_SESSION_STORAGE_DIR: readEnv(NPP.ENV.SESSION_STORAGE_KEYS) ?? defaultSessionStorage(),
 };
 
