@@ -1,6 +1,6 @@
 {
   "name": "@mhdd_24/notepadpp-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MCP server for Notepad++ automation on Windows: open files, manage sessions, and run the editor from Cursor",
   "type": "module",
   "main": "./dist/index.js",
